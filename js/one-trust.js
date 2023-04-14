@@ -11,13 +11,7 @@ var isClosed = getOptanonCookie("OptanonAlertBoxClosed");
 if (isClosed == null) {
     document.cookie = 'OptanonConsent=; domain=' + window.location.host + '; Path=/; Expires=Thu, 01 Jan 2000 00:00:01 GMT;';
 }
-
-var otGUID = "2bf4ec2c-9ff7-4a86-9da0-b8997eac9f7c"
-if (window.location.hostname === "localhost" || window.location.pathname.includes("touchgfx-test.github.io")) {
-    otGUID = "2bf4ec2c-9ff7-4a86-9da0-b8997eac9f7c-test"
-}
-document.write(`<script src="https:\/\/cdn.cookielaw.org\/consent\/${otGUID}\/OtAutoBlock.js" type="text/javascript"></script>`);
-document.write(`<script src="https:\/\/cdn.cookielaw.org\/scripttemplates\/otSDKStub.js" type="text/javascript" charSet="UTF-8" data-domain-script="${otGUID}"></script>`);
+document.write('<script src="https:\/\/cdn.cookielaw.org\/consent\/2fa31965\u002Dd9be\u002D475c\u002Da2b4\u002Da645dd7a65f4\u002Dtest\/otSDKStub.js" type="text/javascript" charSet="UTF-8" data-domain-script="2fa31965\u002Dd9be\u002D475c\u002Da2b4\u002Da645dd7a65f4\u002Dtest"></' + 'script>');
 
 function OptanonWrapper() {
     var dtmCookiesEnabled = typeof OnetrustActiveGroups !== "undefined" 
@@ -43,7 +37,7 @@ function OptanonWrapper() {
         element.classList.remove('ot-hide');                       
         element.style.zIndex = 9999; 
         OneTrust.OnConsentChanged(ReloadPageOnConsentChange);
-    }    
+    }      
 };
 
 window.STFED = typeof STFED === 'undefined' ? {} : STFED;
